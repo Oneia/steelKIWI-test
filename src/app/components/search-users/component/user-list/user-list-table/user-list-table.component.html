@@ -1,0 +1,9 @@
+ <table class="fixed_headers">
+    <tbody>
+      <tr *ngFor="let user of list">
+        <td>{{user.login}}</td>
+        <td><a [routerLink]="['/user', user.login]">see details</a></td>
+        <td><a href={{user.link}}>{{user.link}}</a></td>
+      </tr>
+    </tbody>
+  </table>

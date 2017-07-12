@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="header">
+    <div class="search">
+      <md-input-container class="example-full-width">
+        <input mdInput width="400" placeholder="type text" (input)="searchUsers($event)">
+      </md-input-container>
+    </div>
+     <div class="toggle" (click)="toggleView()">
+         <button md-button>
+             <ng-container *ngIf="showTableView; else divView">
+                 Show div
+             </ng-container>
+             <ng-template #divView>
+                 Show table
+             </ng-template>
+         </button>
+
+    </div>
+  </div>
+  <app-user-list [list]="userList" [showTable]="showTableView"></app-user-list>
+</div>

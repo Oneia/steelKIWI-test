@@ -1,0 +1,17 @@
+<div class="header">
+  <div class="logo">
+    <img src="http://www.hjmt.com/blog/wp-content/uploads/2012/08/Logo_TV_2015.png" alt="">
+  </div>
+  <div class="nav">
+    <a routerLink="/home" routerLinkActive="active-link">Home</a>
+    <a routerLink="/users" routerLinkActive="active-link">Users List</a>
+  </div>
+  <div class="auth">
+    <div class="login" appAuth="false">
+      <button (click)="login()" md-raised-button>Login</button>
+    </div>
+    <div class="logout"  appAuth>
+      <button md-raised-button (click)="logout()">Logout</button>
+    </div>
+  </div>
+</div>

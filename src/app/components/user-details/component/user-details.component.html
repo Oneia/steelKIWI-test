@@ -1,0 +1,24 @@
+<ng-container *ngIf="userModel">
+  <md-card class="example-card">
+    <md-card-header>
+      <div md-card-avatar class="example-header-image"></div>
+      <md-card-title>{{userModel.login}}</md-card-title>
+      <md-card-subtitle>{{userModel.name}}</md-card-subtitle>
+    </md-card-header>
+    <img md-card-image src={{userModel.avatar}}>
+    <md-card-content>
+      <p *ngIf="userModel.bio" class="content">
+        {{userModel.bio}}
+      </p>
+    </md-card-content>
+    <md-card-footer>
+      <div class="info">
+        <div>{{userModel.created}}</div>
+        <div>{{userModel.location}}</div>
+        <div>
+          <a href={{userModel.link}}>{{userModel.link}}</a>
+        </div>
+      </div>
+    </md-card-footer>
+  </md-card>
+</ng-container>

@@ -1,0 +1,13 @@
+<md-list>
+  <md-list-item *ngFor="let user of list">
+    <md-icon md-list-icon>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcUN9_Mtchwn40KMeCTOscQJP2xyH30sR964Nl-Yv41HqbDd-v" alt="">
+    </md-icon>
+    <h4 md-line>{{user.login}}</h4>
+    <p md-line> <a [routerLink]="['/user', user.login]">see more</a> </p>
+    <p md-line>
+      <a href={{user.link}} target='_blank'>{{user.link}}</a>
+    </p>
+  </md-list-item>
+  <md-divider></md-divider>
+</md-list>

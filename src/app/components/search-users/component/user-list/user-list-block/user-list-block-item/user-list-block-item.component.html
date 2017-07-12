@@ -1,0 +1,13 @@
+<div class="item">
+  <div *ngFor="let user of list">
+    <div class="info">
+      <div class="nickname">{{user.login}}</div>
+      <div class="see-more">
+        <a [routerLink]="['user', user.login]">see more</a>
+      </div>
+    </div>
+    <div class="link">
+      <a href={{user.link}} target='_blank'>{{user.link}}</a>
+    </div>
+  </div>
+</div>
